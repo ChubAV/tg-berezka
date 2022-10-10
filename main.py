@@ -2,7 +2,6 @@
 import logging
 from src.config import ColorLogFormatter, PATH_DIR_LOGS, DATE_START, DEBUG
 import os
-from src.tg import start_tg_client
 
 logger = logging.getLogger('tg-berezka')
 logger.setLevel(logging.DEBUG)
@@ -23,6 +22,7 @@ if DEBUG:
 else:
     c_handler.setLevel(logging.INFO)
 
+from src.tg import start_tg_client
 
 if __name__ == '__main__':
     try:
